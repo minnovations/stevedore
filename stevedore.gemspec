@@ -8,8 +8,10 @@ Gem::Specification.new do |s|
   s.licenses    = ['MIT']
   s.authors     = ['M Innovations']
   s.email       = ['contact@minnovations.sg']
-  s.summary     = 'Stevedore'
-  s.description = 'Stevedore'
+  s.homepage    = 'https://github.com/minnovations/stevedore'
+  s.summary     = 'Containerized app development workflow helper'
+  s.description = 'Stevedore is a handy helper to make developing and deploying apps with Docker
+containers a little easier.'
 
   s.required_ruby_version = '>= 2.0.0'
 
