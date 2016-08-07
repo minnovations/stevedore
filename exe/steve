@@ -2,6 +2,10 @@
 
 Signal.trap('INT') { exit 1 }
 
+# Uncomment for testing
+# lib = File.expand_path('../../lib', __FILE__)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
 require 'stevedore'
 
 Stevedore::Cli.new.start

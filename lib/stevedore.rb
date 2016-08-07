@@ -1,0 +1,15 @@
+require 'erb'
+require 'fileutils'
+require 'optparse'
+require 'tmpdir'
+
+require 'aws-sdk'
+require 'dotenv'
+
+require 'stevedore/aws'
+require 'stevedore/cli'
+require 'stevedore/deploy'
+require 'stevedore/docker'
+require 'stevedore/help'
+require 'stevedore/project'
+require 'stevedore/run'
