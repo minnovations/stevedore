@@ -18,7 +18,7 @@ module Stevedore
 
       tmp_dir = Dir.mktmpdir
       system("git archive HEAD | tar -C #{tmp_dir} -x")
-      system("cd #{tmp_dir} && docker build -t #{@container_image_name} --build-arg CONTAINER_IMAGE_BUILD_TIME=#{Time.now.utc.to_i} --build-arg CONTAINER_SCM_COMMIT=#{Project.scm_commit} .")
+      system("cd #{tmp_dir} && docker build -t #{@container_image_name} --build-arg CONTAINER_IMAGE_BUILD_TIME=#{Time.now.utc.to_i} --build-arg CONTAINER_IMAGE_SCM_COMMIT=#{Project.scm_commit} .")
       remove_dangling_container_images
     ensure
       FileUtils.rm_rf(tmp_dir) unless tmp_dir.nil?
